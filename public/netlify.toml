@@ -1,0 +1,55 @@
+# netlify.toml
+
+[[headers]]
+for = "/*"
+[headers.values]
+Strict-Transport-Security = "max-age=2592000; includeSubDomains; preload"
+
+Content-Security-Policy = "base-uri 'self'; form-action 'self'; frame-ancestors 'self'; frame-src 'self'; child-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' *.webstarts.com webstarts.com *.cloudflare.com cloudflare.com *.cloudflareinsights.com cloudflareinsights.com *.cloudfront.net cloudfront.net *.cryptosolicitations.com cryptosolicitations.com *.laxaf.com laxaf.com *.tfiik.com tfiik.com *.dfiik.com dfiik.com *.freegeoip.app freegeoip.app googleapis.com *.googleapis.com *.gstatic.com gstatic.com secure.website *.secure.website *.curator.io curator.io; script-src-elem 'self' data: 'unsafe-inline' 'unsafe-hashes' *.webstarts.com webstarts.com *.cloudflare.com cloudflare.com *.cloudflareinsights.com cloudflareinsights.com *.cloudfront.net cloudfront.net *.cryptosolicitations.com cryptosolicitations.com *.laxaf.com laxaf.com *.tfiik.com tfiik.com *.dfiik.com dfiik.com *.freegeoip.app freegeoip.app googleapis.com *.googleapis.com *.gstatic.com gstatic.com secure.website *.secure.website *.curator.io curator.io; script-src-attr 'self' data: 'unsafe-inline' 'unsafe-hashes' *.webstarts.com webstarts.com *.cloudflare.com cloudflare.com *.cloudflareinsights.com cloudflareinsights.com *.cloudfront.net cloudfront.net *.cryptosolicitations.com cryptosolicitations.com *.laxaf.com laxaf.com *.tfiik.com tfiik.com *.dfiik.com dfiik.com *.freegeoip.app freegeoip.app googleapis.com *.googleapis.com *.gstatic.com gstatic.com secure.website *.secure.website *.curator.io curator.io; style-src 'self' data: 'unsafe-inline' 'unsafe-hashes' *.webstarts.com webstarts.com *.cloudflare.com cloudflare.com *.cloudflareinsights.com cloudflareinsights.com *.cloudfront.net cloudfront.net *.cryptosolicitations.com cryptosolicitations.com *.laxaf.com laxaf.com *.tfiik.com tfiik.com *.dfiik.com dfiik.com *.freegeoip.app freegeoip.app googleapis.com *.googleapis.com *.gstatic.com gstatic.com secure.website *.secure.website *.curator.io curator.io; style-src-elem 'self' data: 'unsafe-inline' 'unsafe-hashes' *.webstarts.com webstarts.com *.cloudflare.com cloudflare.com *.cloudflareinsights.com cloudflareinsights.com *.cloudfront.net cloudfront.net *.cryptosolicitations.com cryptosolicitations.com *.laxaf.com laxaf.com *.tfiik.com tfiik.com *.dfiik.com dfiik.com *.freegeoip.app freegeoip.app googleapis.com *.googleapis.com *.gstatic.com gstatic.com secure.website *.secure.website *.curator.io curator.io; style-src-attr * 'self' data: 'unsafe-inline' 'unsafe-hashes' *.webstarts.com webstarts.com *.cloudflare.com cloudflare.com *.cloudflareinsights.com cloudflareinsights.com *.cloudfront.net cloudfront.net *.cryptosolicitations.com cryptosolicitations.com *.laxaf.com laxaf.com *.tfiik.com tfiik.com *.dfiik.com dfiik.com *.freegeoip.app freegeoip.app *.gstatic.com gstatic.com secure.website *.secure.website *.curator.io curator.io; img-src 'self' *.webstarts.com webstarts.com *.cloudflare.com cloudflare.com *.cloudflareinsights.com cloudflareinsights.com *.cloudfront.net cloudfront.net *.cryptosolicitations.com cryptosolicitations.com *.laxaf.com laxaf.com *.tfiik.com tfiik.com *.dfiik.com dfiik.com *.freegeoip.app freegeoip.app *.gstatic.com gstatic.com secure.website *.secure.website *.curator.io curator.io *.b-cdn.net b-cdn.net; font-src 'self' googleapis.com *.googleapis.com google.com *.google.com *.gstatic.com gstatic.com *.secure.website secure.website *.webstarts.com webstarts.com *.curator.io curator.io; connect-src 'self' *.netlify.app netlify.app *.webstarts.com webstarts.com *.cloudflare.com cloudflare.com *.cloudflareinsights.com cloudflareinsights.com *.cloudfront.net cloudfront.net *.cryptosolicitations.com cryptosolicitations.com *.laxaf.com laxaf.com *.tfiik.com tfiik.com *.dfiik.com dfiik.com *.freegeoip.app freegeoip.app *.gstatic.com gstatic.com secure.website *.secure.website *.curator.io curator.io; media-src 'self' *.webstarts.com webstarts.com *.cloudflare.com cloudflare.com *.cloudflareinsights.com cloudflareinsights.com *.cloudfront.net cloudfront.net *.cryptosolicitations.com cryptosolicitations.com *.laxaf.com laxaf.com *.tfiik.com tfiik.com *.dfiik.com dfiik.com *.freegeoip.app freegeoip.app *.gstatic.com gstatic.com secure.website *.secure.website *.curator.io curator.io; object-src 'self' secure.website *.secure.website *.webstarts.com webstarts.com *.curator.io curator.io; prefetch-src cryptosolicitations.com laxaf.com webstarts.com cloudfront.net cloudflare.com curator.io; upgrade-insecure-requests;"
+
+#require-trusted-types-for 'script';
+
+X-Xss-Protection = "1; mode=block"
+X-Frame-Options = "DENY"
+X-Permitted-Cross-Domain-Policies = "origin-when-cross-origin"
+X-Content-Type-Options = "nosniff"
+Access-Control-Allow-Origin = "*"
+Permissions-Policy = '''
+            accelerometer=(self),
+            ambient-light-sensor=(self),
+            autoplay=(self),
+            camera=(self),
+            encrypted-media=(self),
+            fullscreen=(self),
+            geolocation=(self),
+            gyroscope=(self),
+            magnetometer=(self),
+            microphone=(self),
+            midi=(self),
+            payment=(self),
+            picture-in-picture=(self),
+            speaker=(self),
+            usb=(self),
+            vibrate=(self),
+            vr=(self)
+        '''
+Referrer-Policy = "strict-origin-when-cross-origin"
+Accept-CH = "Downlink,RTT,Device-Memory,Save-Data,DPR,Width"
+#require-trusted-types-for 'script';
+#'https://cloudflareinsights.com' in connect-src
+#'https://static.cloudflareinsights.com' in script-src
+
+#script-src 'nonce-random123' 'strict-dynamic' 'unsafe-inline' https:;
+#object-src 'none';
+#base-uri 'none';
+
+
+[[headers]]
+  # Override cache duration for assets with periods in the filename (i.e. static assets)
+  for = "/*.*"
+    [headers.values]
+    cache-control = "public,max-age=360000"
+
+
+
+
